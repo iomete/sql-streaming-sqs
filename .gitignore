@@ -1,0 +1,6 @@
+target/
+.idea/
+/spark-warehouse/
+/lakehouse_dir/
+/checkpointPath/
+.DS_Store
