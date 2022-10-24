@@ -1,7 +1,7 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.namigaliyev</groupId>
+  <groupId>com.iomete</groupId>
   <artifactId>spark-sql-streaming-sqs_2.12</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
@@ -119,31 +119,31 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <version>2.4</version>
-        <configuration>
-          <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-          </descriptorRefs>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
     </plugins>
   </build>
   <distributionManagement>
     <repository>
-      <id>mvn-plugin</id>
-      <name>iomete Packages</name>
-      <url>https://maven.pkg.github.com/namigaliyev/mvn-plugin</url>
+      <id>github</id>
+      <name>GitHub iomete Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/iomete/sql-streaming-sqs</url>
     </repository>
   </distributionManagement>
+  <profiles>
+    <profile>
+      <id>github</id>
+      <activation>
+        <property>
+          <name>useGitHubPackages</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <distributionManagement>
+        <repository>
+          <id>github</id>
+          <name>GitHub Packages</name>
+          <url>https://github.com/iomete/sql-streaming-sqs</url>
+        </repository>
+      </distributionManagement>
+    </profile>
+  </profiles>
 </project>
