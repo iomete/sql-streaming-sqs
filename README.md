@@ -16,7 +16,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 {% endcomment %}
 -->
-# Spark SQL Streaming Amazon SQS Data Source Connector
+# Spark SQL Streaming Amazon SQS Data Source
 
 A library for reading data from Amazon S3 with optimised listing using Amazon SQS using Spark SQL Streaming ( or Structured streaming.).
 
